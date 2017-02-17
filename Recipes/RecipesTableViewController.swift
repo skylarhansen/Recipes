@@ -8,50 +8,52 @@
 
 import UIKit
 
-class RecipesTableViewController: UITableViewController, UISearchResultsUpdating {
+class RecipesTableViewController: UITableViewController, UISearchBarDelegate {
     
-    var searchController: UISearchController?
-
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    var recipes: [Recipe] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return recipes.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath)
-
-        // Configure the cell...
-
+        
+        let recipe = recipes[indexPath.row]
+        cell.textLabel?.text = recipe.title
+        
         return cell
     }
 
-    // MARK: - Searching
+    // MARK: - Search bar delegate
     
-    func setUpSearchController() {
-        let resultsController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "searchResultsTVC")
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchTerm = searchBar.text else { return }
         
-        searchController = UISearchController(searchResultsController: resultsController)
-        searchController?.searchResultsUpdater = self
-        searchController?.searchBar.sizeToFit()
-        searchController?.hidesNavigationBarDuringPresentation = true
-        
-        tableView.tableHeaderView = searchController?.searchBar
-        definesPresentationContext = true
-    }
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        <#code#>
+        RecipeController.getRecipes(forSearchTerm: searchTerm.lowercased()) { (recipes) in
+            DispatchQueue.main.async {
+                self.recipes = recipes
+                print(recipes)
+            }
+        }
     }
     
     // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+        
     }
-
+    
 }
