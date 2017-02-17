@@ -9,15 +9,27 @@
 import UIKit
 
 class RecipeDetailViewController: UIViewController {
-
+    
     @IBOutlet weak var recipeImageView: UIImageView!
     
-    var recipe: Recipe?
+    var recipe: Recipe? {
+        didSet {
+            if let recipe = recipe {
+                ImageController.image(forURL: recipe.imageURL, completion: { (image) in
+                    self.recipeImageView.image = image
+                })
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func viewRecipeButtonTapped(_ sender: Any) {
+        guard let recipeURLString = recipe?.recipeURL,
+            let recipeURL = URL(string: recipeURLString) else { return }
+        
+        UIApplication.shared.open(recipeURL, options: [:], completionHandler: nil)
     }
 }
