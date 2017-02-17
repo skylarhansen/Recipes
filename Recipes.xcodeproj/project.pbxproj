@@ -17,6 +17,7 @@
 		8C0712A61E57750500428E7B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712A51E57750500428E7B /* Recipe.swift */; };
 		8C0712A81E5778F200428E7B /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712A71E5778F200428E7B /* NetworkController.swift */; };
 		8C0712AA1E57790E00428E7B /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712A91E57790E00428E7B /* ImageController.swift */; };
+		8C0712AC1E57793D00428E7B /* RecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712AB1E57793D00428E7B /* RecipeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		8C0712A51E57750500428E7B /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		8C0712A71E5778F200428E7B /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		8C0712A91E57790E00428E7B /* ImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
+		8C0712AB1E57793D00428E7B /* RecipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				8C0712751E57714D00428E7B /* AppDelegate.swift */,
 				8C0712A51E57750500428E7B /* Recipe.swift */,
+				8C0712AB1E57793D00428E7B /* RecipeController.swift */,
 				8C0712A71E5778F200428E7B /* NetworkController.swift */,
 				8C0712A91E57790E00428E7B /* ImageController.swift */,
 				8C0712791E57714D00428E7B /* Main.storyboard */,
@@ -276,6 +279,7 @@
 				8C0712A61E57750500428E7B /* Recipe.swift in Sources */,
 				8C0712A41E57736000428E7B /* RecipesTableViewController.swift in Sources */,
 				8C0712761E57714D00428E7B /* AppDelegate.swift in Sources */,
+				8C0712AC1E57793D00428E7B /* RecipeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

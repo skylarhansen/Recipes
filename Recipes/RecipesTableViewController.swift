@@ -12,6 +12,9 @@ class RecipesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        RecipeController.getRecipes(forSearchTerm: "apple, butter, sugar, flour") { (recipes) in
+            print(recipes)
+        }
     }
 
     // MARK: - Table view data source
