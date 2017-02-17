@@ -12,7 +12,7 @@ class RecipeDetailViewController: UIViewController {
     
     @IBOutlet weak var recipeImageView: UIImageView!
     
-    var recipe: Recipe? {
+    var recipe: TempRecipe? {
         didSet {
             if let recipe = recipe {
                 ImageController.image(forURL: recipe.imageURL, completion: { (image) in

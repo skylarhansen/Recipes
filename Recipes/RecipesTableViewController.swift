@@ -12,7 +12,7 @@ class RecipesTableViewController: UITableViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var recipes: [Recipe] = [] {
+    var recipes: [TempRecipe] = [] {
         didSet {
             tableView.reloadData()
         }

@@ -1,5 +1,5 @@
 //
-//  Recipe.swift
+//  TempRecipe.swift
 //  Recipes
 //
 //  Created by Skylar Hansen on 2/17/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Recipe {
+class TempRecipe {
     
     static let kTitle = "title"
     static let kRecipeURL = "source_url"
@@ -19,9 +19,9 @@ class Recipe {
     let imageURL: String
     
     init?(dictionary: [String:Any]) {
-        guard let title = dictionary[Recipe.kTitle] as? String,
-            let recipeURL = dictionary[Recipe.kRecipeURL] as? String,
-            let imageURL = dictionary[Recipe.kImageURL] as? String else { return nil }
+        guard let title = dictionary[TempRecipe.kTitle] as? String,
+            let recipeURL = dictionary[TempRecipe.kRecipeURL] as? String,
+            let imageURL = dictionary[TempRecipe.kImageURL] as? String else { return nil }
         
         self.title = title
         self.recipeURL = recipeURL
