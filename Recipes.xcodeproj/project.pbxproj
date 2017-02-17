@@ -14,6 +14,7 @@
 		8C07128B1E57714D00428E7B /* RecipesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C07128A1E57714D00428E7B /* RecipesTests.swift */; };
 		8C0712961E57714D00428E7B /* RecipesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712951E57714D00428E7B /* RecipesUITests.swift */; };
 		8C0712A41E57736000428E7B /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712A31E57736000428E7B /* RecipesTableViewController.swift */; };
+		8C0712A61E57750500428E7B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712A51E57750500428E7B /* Recipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		8C0712951E57714D00428E7B /* RecipesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesUITests.swift; sourceTree = "<group>"; };
 		8C0712971E57714D00428E7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C0712A31E57736000428E7B /* RecipesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesTableViewController.swift; sourceTree = "<group>"; };
+		8C0712A51E57750500428E7B /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				8C0712751E57714D00428E7B /* AppDelegate.swift */,
+				8C0712A51E57750500428E7B /* Recipe.swift */,
 				8C0712791E57714D00428E7B /* Main.storyboard */,
 				8C0712A31E57736000428E7B /* RecipesTableViewController.swift */,
 				8C07127C1E57714D00428E7B /* Assets.xcassets */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C0712A61E57750500428E7B /* Recipe.swift in Sources */,
 				8C0712A41E57736000428E7B /* RecipesTableViewController.swift in Sources */,
 				8C0712761E57714D00428E7B /* AppDelegate.swift in Sources */,
 			);
