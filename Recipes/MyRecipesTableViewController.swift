@@ -36,7 +36,14 @@ class MyRecipesTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-  
+        if segue.identifier == "toDetailFromMyRecipes" {
+            guard let recipeDetailVC = segue.destination as? RecipeDetailViewController,
+                let indexPath = tableView.indexPathForSelectedRow else { return }
+            
+            let recipe = RecipeController.shared.myRecipes[indexPath.row]
+            recipeDetailVC.recipe = recipe
+            recipeDetailVC.title = recipe.title
+        }
     }
 
 }

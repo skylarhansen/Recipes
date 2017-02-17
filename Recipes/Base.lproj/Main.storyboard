@@ -93,6 +93,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="S0J-4f-V4g" kind="show" identifier="toDetailFromMyRecipes" id="ePT-Yo-l7Q"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -201,4 +204,7 @@
             <point key="canvasLocation" x="902" y="851"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ePT-Yo-l7Q"/>
+    </inferredMetricsTieBreakers>
 </document>
