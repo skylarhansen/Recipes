@@ -45,7 +45,6 @@ class RecipesTableViewController: UITableViewController, UISearchBarDelegate {
         RecipeController.shared.getRecipes(forSearchTerm: searchTerm.lowercased()) { (recipes) in
             DispatchQueue.main.async {
                 self.recipes = recipes
-                print(recipes)
             }
         }
         searchBar.resignFirstResponder()

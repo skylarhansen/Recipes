@@ -33,4 +33,11 @@ class RecipeDetailViewController: UIViewController {
         
         UIApplication.shared.open(recipeURL, options: [:], completionHandler: nil)
     }
+    
+    @IBAction func saveRecipeButtonTapped(_ sender: Any) {
+        
+        guard let recipe = recipe else { return }
+        recipe.isSaved = true
+        RecipeController.shared.addRecipeToMyRecipes(recipe: recipe)
+    }
 }

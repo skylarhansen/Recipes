@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="902" y="143"/>
         </scene>
-        <!--Table View Controller-->
+        <!--My Recipes Table View Controller-->
         <scene sceneID="ZnQ-UX-79A">
             <objects>
-                <tableViewController id="4tA-vM-Wio" sceneMemberID="viewController">
+                <tableViewController id="4tA-vM-Wio" customClass="MyRecipesTableViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JN7-l7-vSh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +101,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="qke-md-i9x">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="Ra8-gU-ePh"/>
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="Ra8-gU-ePh">
+                            <connections>
+                                <action selector="closeButtonTapped:" destination="4tA-vM-Wio" id="KDw-kh-CA9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jz-oj-6XY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -134,11 +138,20 @@
                                     <action selector="viewRecipeButtonTapped:" destination="S0J-4f-V4g" eventType="touchUpInside" id="jCS-pO-BHp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03T-fQ-hAM">
+                                <rect key="frame" x="145" y="500" width="84" height="30"/>
+                                <state key="normal" title="Save Recipe"/>
+                                <connections>
+                                    <action selector="saveRecipeButtonTapped:" destination="S0J-4f-V4g" eventType="touchUpInside" id="mdr-5I-gyY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7C5-JY-fKj" firstAttribute="centerX" secondItem="h3V-Hm-ATQ" secondAttribute="centerX" id="6qf-sQ-7Wc"/>
+                            <constraint firstItem="03T-fQ-hAM" firstAttribute="top" secondItem="7C5-JY-fKj" secondAttribute="bottom" constant="8" id="Af4-nC-AhA"/>
                             <constraint firstItem="h3V-Hm-ATQ" firstAttribute="top" secondItem="K1w-4u-TAA" secondAttribute="bottom" constant="45" id="An6-OP-NbA"/>
+                            <constraint firstItem="03T-fQ-hAM" firstAttribute="centerX" secondItem="7C5-JY-fKj" secondAttribute="centerX" id="E4W-8l-lWm"/>
                             <constraint firstItem="7C5-JY-fKj" firstAttribute="top" secondItem="h3V-Hm-ATQ" secondAttribute="bottom" constant="26" id="HRo-QX-m4w"/>
                             <constraint firstItem="h3V-Hm-ATQ" firstAttribute="centerX" secondItem="itn-2Y-M1x" secondAttribute="centerX" id="Jkz-Nl-Y2N"/>
                         </constraints>

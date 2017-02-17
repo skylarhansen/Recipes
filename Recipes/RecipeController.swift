@@ -7,12 +7,18 @@
 //
 
 import Foundation
+import CoreData
 
 class RecipeController {
     
     static let shared = RecipeController()
     
+    var recipeMasterList: [Recipe] = []
     var myRecipes: [Recipe] = []
+    
+    init() {
+        loadFromPersistentStore()
+    }
     
     func getRecipes(forSearchTerm searchTerm: String, completion: @escaping ([Recipe]) -> Void) {
         
@@ -39,11 +45,35 @@ class RecipeController {
             }
             
             let recipes = recipeDictionaries.flatMap { Recipe(dictionary: $0) }
+            self.recipeMasterList = recipes
             completion(recipes)
         }
     }
     
-    func addRecipeToMyRecipes() {
-        
+    func addRecipeToMyRecipes(recipe: Recipe) {
+        deleteRecipesFromContext(recipes: recipeMasterList)
+        myRecipes.append(recipe)
+        saveToPersistentStore()
+    }
+    
+    func deleteRecipesFromContext(recipes: [Recipe]) {
+        for recipe in recipes {
+            if !recipe.isSaved {
+                recipe.managedObjectContext?.delete(recipe)
+            }
+        }
+    }
+    
+    func saveToPersistentStore() {
+        do {
+            try CoreDataStack.context.save()
+        } catch {
+            print("Error saving to Core Data: \(error.localizedDescription)")
+        }
+    }
+    
+    func loadFromPersistentStore() {
+        let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
+        myRecipes = (try? CoreDataStack.context.fetch(request)) ?? []
     }
 }

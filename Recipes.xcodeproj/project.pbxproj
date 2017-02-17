@@ -20,9 +20,8 @@
 		8C0712B01E57866E00428E7B /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712AF1E57866E00428E7B /* RecipeDetailViewController.swift */; };
 		8C0712B51E579BE200428E7B /* MyRecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712B41E579BE200428E7B /* MyRecipesTableViewController.swift */; };
 		8C0712B81E579CA000428E7B /* Recipes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712B61E579CA000428E7B /* Recipes.xcdatamodeld */; };
-		8C0712BA1E579D8E00428E7B /* TempRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712B91E579D8E00428E7B /* TempRecipe.swift */; };
 		8C0712BC1E579DE200428E7B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712BB1E579DE200428E7B /* CoreDataStack.swift */; };
-		8C0712BE1E579E4600428E7B /* Recipe+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712BD1E579E4600428E7B /* Recipe+Convenience.swift */; };
+		8C0712C21E57A5D600428E7B /* Recipe+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712C11E57A5D600428E7B /* Recipe+Convenience.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +61,8 @@
 		8C0712AF1E57866E00428E7B /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 		8C0712B41E579BE200428E7B /* MyRecipesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRecipesTableViewController.swift; sourceTree = "<group>"; };
 		8C0712B71E579CA000428E7B /* Recipes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipes.xcdatamodel; sourceTree = "<group>"; };
-		8C0712B91E579D8E00428E7B /* TempRecipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempRecipe.swift; sourceTree = "<group>"; };
 		8C0712BB1E579DE200428E7B /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		8C0712BD1E579E4600428E7B /* Recipe+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Recipe+Convenience.swift"; sourceTree = "<group>"; };
+		8C0712C11E57A5D600428E7B /* Recipe+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Recipe+Convenience.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +146,7 @@
 		8C0712B11E579AAA00428E7B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8C0712B91E579D8E00428E7B /* TempRecipe.swift */,
-				8C0712BD1E579E4600428E7B /* Recipe+Convenience.swift */,
+				8C0712C11E57A5D600428E7B /* Recipe+Convenience.swift */,
 				8C0712BB1E579DE200428E7B /* CoreDataStack.swift */,
 				8C0712B61E579CA000428E7B /* Recipes.xcdatamodeld */,
 			);
@@ -320,10 +317,9 @@
 				8C0712A41E57736000428E7B /* RecipesTableViewController.swift in Sources */,
 				8C0712BC1E579DE200428E7B /* CoreDataStack.swift in Sources */,
 				8C0712761E57714D00428E7B /* AppDelegate.swift in Sources */,
-				8C0712BA1E579D8E00428E7B /* TempRecipe.swift in Sources */,
+				8C0712C21E57A5D600428E7B /* Recipe+Convenience.swift in Sources */,
 				8C0712AC1E57793D00428E7B /* RecipeController.swift in Sources */,
 				8C0712B81E579CA000428E7B /* Recipes.xcdatamodeld in Sources */,
-				8C0712BE1E579E4600428E7B /* Recipe+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
