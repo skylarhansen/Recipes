@@ -53,7 +53,12 @@ class RecipesTableViewController: UITableViewController, UISearchBarDelegate {
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "toRecipeDetail" {
+            guard let recipeDetailVC = segue.destination as? RecipeDetailViewController,
+            let indexPath = tableView.indexPathForSelectedRow else { return }
+            
+            let recipe = recipes[indexPath.row]
+            recipeDetailVC.recipe = recipe
+        }
     }
-    
 }

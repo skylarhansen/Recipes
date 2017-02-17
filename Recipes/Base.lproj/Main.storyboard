@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,6 +43,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="S0J-4f-V4g" kind="show" identifier="toRecipeDetail" id="dhV-92-Bll"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -57,6 +61,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndm-1v-Uu5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="902" y="143"/>
+        </scene>
+        <!--Recipe Detail View Controller-->
+        <scene sceneID="W9b-QX-e9u">
+            <objects>
+                <viewController id="S0J-4f-V4g" customClass="RecipeDetailViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K1w-4u-TAA"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZTq-pq-UYr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="itn-2Y-M1x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h3V-Hm-ATQ">
+                                <rect key="frame" x="37" y="109" width="300" height="327"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="h3V-Hm-ATQ" secondAttribute="height" multiplier="100:109" id="W0y-lz-m4t"/>
+                                    <constraint firstAttribute="width" constant="300" id="aRH-6y-9Lr"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7C5-JY-fKj">
+                                <rect key="frame" x="145" y="462" width="84" height="30"/>
+                                <state key="normal" title="View Recipe"/>
+                                <connections>
+                                    <action selector="viewRecipeButtonTapped:" destination="S0J-4f-V4g" eventType="touchUpInside" id="jCS-pO-BHp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7C5-JY-fKj" firstAttribute="centerX" secondItem="h3V-Hm-ATQ" secondAttribute="centerX" id="6qf-sQ-7Wc"/>
+                            <constraint firstItem="h3V-Hm-ATQ" firstAttribute="top" secondItem="K1w-4u-TAA" secondAttribute="bottom" constant="45" id="An6-OP-NbA"/>
+                            <constraint firstItem="7C5-JY-fKj" firstAttribute="top" secondItem="h3V-Hm-ATQ" secondAttribute="bottom" constant="26" id="HRo-QX-m4w"/>
+                            <constraint firstItem="h3V-Hm-ATQ" firstAttribute="centerX" secondItem="itn-2Y-M1x" secondAttribute="centerX" id="Jkz-Nl-Y2N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recipeImageView" destination="h3V-Hm-ATQ" id="c7J-l9-Zsw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ih-oL-AdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1668" y="142.57871064467767"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r6r-D6-2fq">
