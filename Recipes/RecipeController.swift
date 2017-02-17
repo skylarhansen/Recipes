@@ -12,9 +12,9 @@ class RecipeController {
     
     static let shared = RecipeController()
     
-    var myRecipes: [TempRecipe] = []
+    var myRecipes: [Recipe] = []
     
-    func getRecipes(forSearchTerm searchTerm: String, completion: @escaping ([TempRecipe]) -> Void) {
+    func getRecipes(forSearchTerm searchTerm: String, completion: @escaping ([Recipe]) -> Void) {
         
         let baseURL = URL(string: "http://food2fork.com/api/search")
         let apiKey = "b37fa4177b1e242db8e30dcac04fca76"
@@ -38,7 +38,7 @@ class RecipeController {
                     return
             }
             
-            let recipes = recipeDictionaries.flatMap { TempRecipe(dictionary: $0) }
+            let recipes = recipeDictionaries.flatMap { Recipe(dictionary: $0) }
             completion(recipes)
         }
     }
