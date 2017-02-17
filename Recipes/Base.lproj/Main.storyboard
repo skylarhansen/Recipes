@@ -53,7 +53,13 @@
                             <outlet property="delegate" destination="2UO-eX-aJl" id="F4o-Xa-8EA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="hN2-0t-tEe"/>
+                    <navigationItem key="navigationItem" id="hN2-0t-tEe">
+                        <barButtonItem key="rightBarButtonItem" title="My Recipes" id="HDh-5o-E2X">
+                            <connections>
+                                <segue destination="z2n-sY-00b" kind="presentation" id="7cT-OH-rpP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="5XI-zh-Hn9" id="q5F-jQ-YhN"/>
                     </connections>
@@ -61,6 +67,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ndm-1v-Uu5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="902" y="143"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="ZnQ-UX-79A">
+            <objects>
+                <tableViewController id="4tA-vM-Wio" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JN7-l7-vSh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myRecipeCell" textLabel="OBB-1F-TmD" style="IBUITableViewCellStyleDefault" id="4M5-Vc-Efb">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4M5-Vc-Efb" id="X1v-qI-KSw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OBB-1F-TmD">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4tA-vM-Wio" id="3Hc-fm-ROA"/>
+                            <outlet property="delegate" destination="4tA-vM-Wio" id="sQL-9z-fSh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qke-md-i9x">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="Ra8-gU-ePh"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jz-oj-6XY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1668" y="851"/>
         </scene>
         <!--Recipe Detail View Controller-->
         <scene sceneID="W9b-QX-e9u">
@@ -122,6 +168,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lu4-h0-T1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="142.57871064467767"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Cmt-JD-gho">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z2n-sY-00b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Izx-Ya-6Ok">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4tA-vM-Wio" kind="relationship" relationship="rootViewController" id="W42-cc-4mb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="klY-MW-43h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="851"/>
         </scene>
     </scenes>
 </document>

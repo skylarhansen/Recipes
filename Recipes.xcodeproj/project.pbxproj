@@ -19,6 +19,7 @@
 		8C0712AA1E57790E00428E7B /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712A91E57790E00428E7B /* ImageController.swift */; };
 		8C0712AC1E57793D00428E7B /* RecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712AB1E57793D00428E7B /* RecipeController.swift */; };
 		8C0712B01E57866E00428E7B /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712AF1E57866E00428E7B /* RecipeDetailViewController.swift */; };
+		8C0712B51E579BE200428E7B /* MyRecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0712B41E579BE200428E7B /* MyRecipesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		8C0712A91E57790E00428E7B /* ImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 		8C0712AB1E57793D00428E7B /* RecipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeController.swift; sourceTree = "<group>"; };
 		8C0712AF1E57866E00428E7B /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		8C0712B41E579BE200428E7B /* MyRecipesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRecipesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,13 +110,10 @@
 			isa = PBXGroup;
 			children = (
 				8C0712751E57714D00428E7B /* AppDelegate.swift */,
-				8C0712A51E57750500428E7B /* Recipe.swift */,
-				8C0712AB1E57793D00428E7B /* RecipeController.swift */,
-				8C0712A71E5778F200428E7B /* NetworkController.swift */,
-				8C0712A91E57790E00428E7B /* ImageController.swift */,
+				8C0712B11E579AAA00428E7B /* Model */,
+				8C0712B21E579AB100428E7B /* Controllers */,
+				8C0712B31E579AB700428E7B /* View Controllers */,
 				8C0712791E57714D00428E7B /* Main.storyboard */,
-				8C0712A31E57736000428E7B /* RecipesTableViewController.swift */,
-				8C0712AF1E57866E00428E7B /* RecipeDetailViewController.swift */,
 				8C07127C1E57714D00428E7B /* Assets.xcassets */,
 				8C07127E1E57714D00428E7B /* LaunchScreen.storyboard */,
 				8C0712811E57714D00428E7B /* Info.plist */,
@@ -138,6 +137,34 @@
 				8C0712971E57714D00428E7B /* Info.plist */,
 			);
 			path = RecipesUITests;
+			sourceTree = "<group>";
+		};
+		8C0712B11E579AAA00428E7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C0712A51E57750500428E7B /* Recipe.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8C0712B21E579AB100428E7B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C0712AB1E57793D00428E7B /* RecipeController.swift */,
+				8C0712A71E5778F200428E7B /* NetworkController.swift */,
+				8C0712A91E57790E00428E7B /* ImageController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8C0712B31E579AB700428E7B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C0712A31E57736000428E7B /* RecipesTableViewController.swift */,
+				8C0712AF1E57866E00428E7B /* RecipeDetailViewController.swift */,
+				8C0712B41E579BE200428E7B /* MyRecipesTableViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C0712AA1E57790E00428E7B /* ImageController.swift in Sources */,
+				8C0712B51E579BE200428E7B /* MyRecipesTableViewController.swift in Sources */,
 				8C0712A81E5778F200428E7B /* NetworkController.swift in Sources */,
 				8C0712B01E57866E00428E7B /* RecipeDetailViewController.swift in Sources */,
 				8C0712A61E57750500428E7B /* Recipe.swift in Sources */,

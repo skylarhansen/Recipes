@@ -42,7 +42,7 @@ class RecipesTableViewController: UITableViewController, UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchTerm = searchBar.text else { return }
         
-        RecipeController.getRecipes(forSearchTerm: searchTerm.lowercased()) { (recipes) in
+        RecipeController.shared.getRecipes(forSearchTerm: searchTerm.lowercased()) { (recipes) in
             DispatchQueue.main.async {
                 self.recipes = recipes
                 print(recipes)

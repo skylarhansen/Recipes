@@ -10,10 +10,14 @@ import Foundation
 
 class RecipeController {
     
-    static let baseURL = URL(string: "http://food2fork.com/api/search")
-    static let apiKey = "b37fa4177b1e242db8e30dcac04fca76"
+    static let shared = RecipeController()
     
-    static func getRecipes(forSearchTerm searchTerm: String, completion: @escaping ([Recipe]) -> Void) {
+    var myRecipes: [Recipe] = []
+    
+    func getRecipes(forSearchTerm searchTerm: String, completion: @escaping ([Recipe]) -> Void) {
+        
+        let baseURL = URL(string: "http://food2fork.com/api/search")
+        let apiKey = "b37fa4177b1e242db8e30dcac04fca76"
         
         guard let url = baseURL else { return }
         
@@ -37,5 +41,9 @@ class RecipeController {
             let recipes = recipeDictionaries.flatMap { Recipe(dictionary: $0) }
             completion(recipes)
         }
+    }
+    
+    func addRecipeToMyRecipes() {
+        
     }
 }
