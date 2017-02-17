@@ -48,6 +48,7 @@ class RecipesTableViewController: UITableViewController, UISearchBarDelegate {
                 print(recipes)
             }
         }
+        searchBar.resignFirstResponder()
     }
     
     // MARK: - Navigation
@@ -59,6 +60,7 @@ class RecipesTableViewController: UITableViewController, UISearchBarDelegate {
             
             let recipe = recipes[indexPath.row]
             recipeDetailVC.recipe = recipe
+            recipeDetailVC.title = recipe.title
         }
     }
 }
