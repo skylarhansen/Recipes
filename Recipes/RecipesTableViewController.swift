@@ -8,13 +8,12 @@
 
 import UIKit
 
-class RecipesTableViewController: UITableViewController {
+class RecipesTableViewController: UITableViewController, UISearchResultsUpdating {
+    
+    var searchController: UISearchController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        RecipeController.getRecipes(forSearchTerm: "apple, butter, sugar, flour") { (recipes) in
-            print(recipes)
-        }
     }
 
     // MARK: - Table view data source
@@ -24,13 +23,31 @@ class RecipesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath)
 
         // Configure the cell...
 
         return cell
     }
 
+    // MARK: - Searching
+    
+    func setUpSearchController() {
+        let resultsController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "searchResultsTVC")
+        
+        searchController = UISearchController(searchResultsController: resultsController)
+        searchController?.searchResultsUpdater = self
+        searchController?.searchBar.sizeToFit()
+        searchController?.hidesNavigationBarDuringPresentation = true
+        
+        tableView.tableHeaderView = searchController?.searchBar
+        definesPresentationContext = true
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        <#code#>
+    }
+    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
