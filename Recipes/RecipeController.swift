@@ -64,6 +64,12 @@ class RecipeController {
         }
     }
     
+    func delete(recipe: Recipe) {
+        guard let index = myRecipes.index(of: recipe) else { return }
+        myRecipes.remove(at: index)
+        recipe.managedObjectContext?.delete(recipe)
+    }
+    
     func saveToPersistentStore() {
         do {
             try CoreDataStack.context.save()

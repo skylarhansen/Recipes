@@ -27,6 +27,11 @@ class RecipeDetailViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(recipe!.title)
+    }
+    
     @IBAction func viewRecipeButtonTapped(_ sender: Any) {
         guard let recipeURLString = recipe?.recipeURL,
             let recipeURL = URL(string: recipeURLString) else { return }
